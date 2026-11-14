@@ -1,5 +1,5 @@
-// tsc не тянет next: типы даём сами, в рантайме и в d.ts next не фигурирует.
-// Потребитель с next резолвит импорты сам; в не-next проектах — алиас/шим на 'next/link' и 'next/navigation'.
+// tsc does not pull in next: we declare the types ourselves; next never appears at runtime or in the emitted d.ts.
+// A consumer with next resolves the imports itself; in non-next projects use an alias/shim for 'next/link' and 'next/navigation'.
 declare module 'next/link' {
 	import type { AnchorHTMLAttributes, ReactNode } from 'react'
 

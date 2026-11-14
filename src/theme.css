@@ -1,8 +1,8 @@
 /*
- * likvid-ui/theme.css — базовые токены кита.
- * Подключается один раз в проект: import 'likvid-ui/theme.css'.
- * Слой гарантированно ниже любых невнеслоевых стилей хоста: свои значения
- * проект задаёт как обычно через :root, порядок импорта не важен.
+ * likvid-ui/theme.css — base kit tokens.
+ * Import once into the project: import 'likvid-ui/theme.css'.
+ * The layer is guaranteed to sit below any unlayered host styles: the project
+ * sets its own values via :root as usual, import order does not matter.
  */
 
 @layer likvid.tokens {
@@ -19,7 +19,7 @@
   }
 }
 
-/* bleed NavBarBase/LiquidRadio — значение проектное, theme.css его не задаёт;
-   проект (или скилл интеграции) объявляет сам:
-   :root { --likvid-padding-inline-mobile: <горизонтальный паддинг страницы на мобилке>; }
-   без объявления компоненты едят фолбэк 1rem. */
+/* bleed of NavBarBase/LiquidRadio — a project-specific value, theme.css does not set it;
+   the project (or the integration skill) declares it itself:
+   :root { --likvid-padding-inline-mobile: <horizontal page padding on mobile>; }
+   without a declaration the components fall back to 1rem. */

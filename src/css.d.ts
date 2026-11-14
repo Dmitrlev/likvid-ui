@@ -1,4 +1,4 @@
-// tsc не понимает css-импорты; для сборщика (vite) они резолвятся сами
+// tsc does not understand css imports; the bundler (vite) resolves them on its own
 declare module '*.css'
 
 declare module 'swiper/css'

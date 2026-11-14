@@ -33,7 +33,7 @@ interface I_commonProps {
 	style?: CSSProperties
 }
 
-// href обязателен только для 'a' и запрещён для остальных тегов
+// href is required for 'a' only and forbidden for all other tags
 type T_hrefProps<T_as extends T_tag> = T_as extends 'a' ? { href: string } : { href?: never }
 
 type T_props<T_as extends T_tag = 'button'> = I_commonProps &
