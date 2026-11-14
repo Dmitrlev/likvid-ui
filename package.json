@@ -5,6 +5,10 @@
   "type": "module",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dmitrlev/likvid-ui.git"
+  },
   "scripts": {
     "build": "tsc -p tsconfig.build.json && node scripts/copy-css.mjs",
     "prepack": "yarn build",
