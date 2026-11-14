@@ -14,13 +14,7 @@ Import the base tokens once — the order does not matter, the layer always sits
 import 'likvid-ui/theme.css';
 ```
 
-The project can override any token in its own `:root` (legacy names `--color-main`,
-`--radius-widget`, `--radius-pull` are picked up through the bridge). The only token
-that lives outside theme.css is the NavBarBase/LiquidRadio bleed inset:
 
-```css
-:root { --likvid-padding-inline-mobile: <horizontal page padding on mobile>; }
-```
 
 ## Exports
 
