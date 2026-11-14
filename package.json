@@ -1,0 +1,60 @@
+{
+  "name": "likvid-ui",
+  "version": "2.2.0",
+  "description": "Likvid UI — glass-кит React-компонентов в стиле Apple Liquid Glass",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json && node scripts/copy-css.mjs",
+    "prepack": "yarn build",
+    "login": "npm login",
+    "pub": "npm publish",
+    "pub:patch": "npm version patch --no-git-tag-version && npm publish",
+    "pub:minor": "npm version minor --no-git-tag-version && npm publish",
+    "pub:major": "npm version major --no-git-tag-version && npm publish"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./next": {
+      "types": "./dist/next.d.ts",
+      "import": "./dist/next.js"
+    },
+    "./theme.css": "./dist/theme.css"
+  },
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "react",
+    "ui",
+    "glass",
+    "liquid-glass",
+    "components"
+  ],
+  "license": "MIT",
+  "packageManager": "yarn@1.22.22",
+  "peerDependencies": {
+    "next": ">=13",
+    "react": ">=18",
+    "react-dom": ">=18",
+    "swiper": ">=11"
+  },
+  "peerDependenciesMeta": {
+    "next": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "swiper": "^11.2.10",
+    "typescript": "^5.6.3"
+  },
+  "dependencies": {
+    "classnames": "^2.5.1"
+  }
+}

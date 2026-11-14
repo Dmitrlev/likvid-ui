@@ -1,0 +1,25 @@
+/*
+ * likvid-ui/theme.css — базовые токены кита.
+ * Подключается один раз в проект: import 'likvid-ui/theme.css'.
+ * Слой гарантированно ниже любых невнеслоевых стилей хоста: свои значения
+ * проект задаёт как обычно через :root, порядок импорта не важен.
+ */
+
+@layer likvid.tokens {
+  :root {
+    --likvid-radius-widget: var(--radius-widget, 24px);
+    --likvid-radius-pill: var(--radius-pull, 9999px);
+    --likvid-color-main: var(--color-main, #ff0030);
+    --likvid-color-gray: #0000001a;
+    --likvid-color-html: #f5f5f5;
+  }
+
+  html {
+    background: var(--likvid-color-html);
+  }
+}
+
+/* bleed NavBarBase/LiquidRadio — значение проектное, theme.css его не задаёт;
+   проект (или скилл интеграции) объявляет сам:
+   :root { --likvid-padding-inline-mobile: <горизонтальный паддинг страницы на мобилке>; }
+   без объявления компоненты едят фолбэк 1rem. */

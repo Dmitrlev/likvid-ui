@@ -1,0 +1,44 @@
+:where(.wrapper) {
+  position: relative;
+  backdrop-filter: blur(2px);
+  box-shadow: 0 0 40px -5px #5353531f;
+  border-radius: var(--likvid-radius-widget);
+  corner-shape: squircle !important;
+  transition: background 0.1s;
+}
+
+:where(.wrapper) .shadow {
+  position: absolute;
+  inset: 0;
+  box-shadow: inset 1px 1px 1px 0 white, inset -1px -1px 1px 0 white;
+  z-index: -1;
+  border-radius: var(--likvid-radius-widget);
+  corner-shape: squircle !important;
+  background: linear-gradient(
+    to bottom right,
+    transparent 30%,
+    white
+  );
+}
+
+:where(.wrapperPill) {
+  border-radius: var(--likvid-radius-pill);
+  corner-shape: initial !important;
+}
+
+:where(.wrapperPill) .shadow {
+  border-radius: var(--likvid-radius-pill);
+  corner-shape: initial !important;
+}
+
+:where(.wrapperButton) {
+  border: none;
+  padding: 0;
+  margin: 0;
+  background: transparent;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+  text-align: inherit;
+  appearance: none;
+}

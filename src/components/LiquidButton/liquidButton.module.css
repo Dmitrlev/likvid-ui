@@ -1,0 +1,128 @@
+:where(.wrapper) {
+  --likvid-button-radius: var(--likvid-radius-pill);
+
+  position: relative;
+  width: max-content;
+  height: max-content;
+  border: none;
+  appearance: none;
+  font: inherit;
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+  background: linear-gradient(
+    to bottom right,
+    transparent 30%,
+    white
+  );
+  backdrop-filter: blur(2px);
+  box-shadow: 0 0 20px -2px #5d5c5c40;
+  padding: 0.875rem 1rem;
+  border-radius: var(--likvid-button-radius);
+  transition: 0.1s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+:where(.shapePill) {
+  --likvid-button-radius: var(--likvid-radius-pill);
+  corner-shape: initial !important;
+}
+
+:where(.shapeWidget) {
+  --likvid-button-radius: var(--likvid-radius-widget);
+  corner-shape: squircle !important;
+}
+
+:where(.shapeWidget)::before {
+  corner-shape: squircle;
+}
+
+:where(.wrapper):not(:disabled):not(.disabled):active {
+  transform: scale(1.1);
+}
+
+:where(.wrapper):disabled,
+:where(.wrapper).disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+:where(.wrapper):disabled:active,
+:where(.wrapper).disabled:active {
+  transform: none;
+  animation: liquidButtonShake 0.1s ease-in-out;
+}
+
+@keyframes liquidButtonShake {
+  0%, 100% {
+    transform: translateX(0);
+  }
+
+  25% {
+    transform: translateX(-3px);
+  }
+
+  50% {
+    transform: translateX(3px);
+  }
+
+  75% {
+    transform: translateX(-2px);
+  }
+}
+
+:where(.wrapper)::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: var(--likvid-button-radius) !important;
+  box-shadow: inset 1px 1px 1px 0 white, inset -1px -1px 1px 0 white;
+  z-index: 0;
+}
+
+:where(.variantAccent) {
+  background: var(--likvid-color-main);
+  color: white;
+}
+
+:where(.variantAccentDark) {
+  background: var(--likvid-color-main);
+  color: white;
+}
+
+:where(.wrapperActive) {
+  background: #000000a3;
+  color: white;
+}
+
+:where(.wrapper) p {
+  margin: 0;
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: 0.1s ease-in-out;
+}
+
+:where(.loading) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 1.19em;
+}
+
+:where(.loader) {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  border: 2px solid rgba(128, 128, 128, 0.3);
+  border-top-color: currentColor;
+  border-radius: 50%;
+  animation: loaderSpin 0.8s linear infinite;
+}
+
+@keyframes loaderSpin {
+  to {
+    transform: rotate(360deg);
+  }
+}
