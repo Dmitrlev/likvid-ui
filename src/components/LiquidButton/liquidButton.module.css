@@ -16,7 +16,7 @@
     white
   );
   backdrop-filter: blur(2px);
-  box-shadow: 0 0 20px -2px #5d5c5c40;
+  box-shadow: 0 0 20px -3px #5d5c5c40;
   padding: 0.875rem 1rem;
   border-radius: var(--likvid-button-radius);
   transition: 0.1s ease-in-out;
@@ -40,7 +40,12 @@
 }
 
 :where(.wrapper):not(:disabled):not(.disabled):active {
-  transform: scale(1.1);
+  transform: scale(1.05);
+  background: linear-gradient(
+    to bottom right,
+    transparent 0%,
+    white
+  );
 }
 
 :where(.wrapper):disabled,

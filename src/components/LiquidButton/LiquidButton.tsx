@@ -4,7 +4,6 @@ import {
 	memo,
 	type ComponentPropsWithoutRef,
 	type CSSProperties,
-	type ForwardedRef,
 	type MouseEventHandler,
 	type ReactNode,
 	type Ref
