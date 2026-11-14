@@ -1,6 +1,6 @@
 {
   "name": "likvid-ui",
-  "version": "2.2.2",
+  "version": "2.2.3",
   "description": "Likvid UI — a glass React component kit in Apple Liquid Glass style",
   "type": "module",
   "main": "./dist/index.js",
